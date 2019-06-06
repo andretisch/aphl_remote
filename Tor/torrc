@@ -1,0 +1,2 @@
+HiddenServiceDir "./hidden_service/"
+HiddenServicePort 15902 andrey-it:5902
