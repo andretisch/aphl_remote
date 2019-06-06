@@ -1,6 +1,7 @@
 import subprocess
 import random
 import socket
+import os
 
 r_pwd = str(random.randint(100000,999999))
 output = subprocess.check_output(['vnc\\vncpassword.exe', r_pwd], shell=True).split('\r\n')
@@ -27,13 +28,13 @@ tor_file = open("Tor\\torrc", "w")
 tor_file.write(torrc)
 tor_file.close()
 
-import os
-os.system("taskkill /im tor.exe")
+os.system("taskkill /im tor.exe /f")
+os.system("taskkill /im winvnc.exe /f")
 
-#vncstart = subprocess.Popen(['vnc\\winvnc.exe'], shell=True)
-#torstart = subprocess.Popen(['Tor\\tor.exe','-f','torrc'], shell=True)
+vncstart = subprocess.Popen(['vnc\\winvnc.exe'], shell=True)
+torstart = subprocess.Popen(['Tor\\tor.exe','-f','torrc'], shell=True)
 
 tor_host = open("Tor\\hidden_service\\hostname", "r")
 print tor_host.read()
 tor_host.close()
-#vncstart.wait()
+vncstart.wait()
