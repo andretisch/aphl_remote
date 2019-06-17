@@ -3,6 +3,8 @@ import subprocess
 import random
 import socket
 import os
+import requests
+from time import sleep
 
 r_pwd = str(random.randint(100000,999999))
 output = subprocess.check_output(['vnc\\vncpassword.exe', r_pwd], shell=True).split('\r\n')
@@ -10,7 +12,7 @@ pwd=''
 
 for i in output:
     pwd+=str(i)
-print 'Password '+str(r_pwd)
+print u'Ваш пароль: '.encode('cp866')+str(r_pwd)
 
 
 vncini = '[80000001\\Software\\ORL\\WinVNC3]\nSocketConnect=D1\nAutoPortSelect=D0\nPortNumber=D5902\nHTTPPortNumber=D5802\nInputsEnabled=D1\nLocalInputsDisabled=D0\nIdleTimeout=D0\n\
@@ -20,7 +22,7 @@ LocalInputsPriority=D0\nPassword=B'+pwd+'\nPasswordViewOnly=B'+pwd+'\n[80000002\
 AllowLoopback=D1\nAuthRequired=D1\nDebugMode=D0\nDebugLevel=D2\n'
 
 #torrc = 'HiddenServiceDir "./hidden_service/"\nHiddenServicePort 15902 2mliuxkv76rwpbs4g2oabstyj6nl2phwjwxvudabdb7p3wtr5qsjsmqd.onion:5902'
-torrc = 'HiddenServiceDir "./Tor/hidden_service/"\nHiddenServicePort 15902 '+socket.gethostname()+':5902\nSocksPort 127.0.0.1:9050 PreferSOCKSNoAuth'
+torrc = 'HiddenServiceDir "./Tor/hidden_service/"\nHiddenServicePort 15902 '+socket.gethostname()+':5902\nSocksPort 127.0.0.1:9051 PreferSOCKSNoAuth'
 
 vnc_file = open("vnc\\winvnc.ini", "w")
 vnc_file.write(vncini)
@@ -30,17 +32,25 @@ tor_file = open("Tor\\torrc", "w")
 tor_file.write(torrc)
 tor_file.close()
 
-os.system("echo off;taskkill /im tor.exe /f >NUL")
-os.system("echo off;taskkill /im winvnc.exe /f >NUL")
+os.system("taskkill /im tor.exe /f >NUL")
+os.system("taskkill /im winvnc.exe /f >NUL")
 
 vncstart = subprocess.Popen(['vnc\\winvnc.exe'], shell=True)
 torstart = subprocess.Popen(['Tor\\tor.exe','-f','Tor\\torrc','>>Tor\\log.txt'], shell=True)
-
-tor_host = open("Tor\\hidden_service\\hostname", "r")
-print 'HstName '+tor_host.read()
+sleep(3)
+tor_host = open("Tor\\hidden_service\\hostname", "r+")
+th = tor_host.readlines()[0]
+print u'Доменное имя: '.encode('cp866')+th
+id_host = requests.get('http://localhost:19191/'+th[:-1])
 tor_host.close()
+id_host=id_host.text
+
 while True:
-    ID= str(input('Id:'))
+    print u'Введите ID: '.encode('cp866')
+    ID = str(input())
+    print ID
     if ID !='':
-        print 'Правельно'
-vncstart.wait()
+        subprocess.Popen(['vnc\\VNC-Viewer.exe',id_host+':15902','-ProxyServer','socks://127.0.0.1:9051','>>vnc\\log.txt'], shell=True)
+        #os.system("vnc\\VNC-Viewer.exe 2aggmsges4zf456axt4osofoa54ukdwamavheqe7afdrmvom2ut5mmqd.onion:15902 -ProxyServer socks://127.0.0.1:9050")
+    else:
+        pass
