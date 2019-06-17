@@ -50,7 +50,7 @@ while True:
     ID = str(input())
     print ID
     if ID !='':
-        subprocess.Popen(['vnc\\VNC-Viewer.exe',id_host+':15902','-ProxyServer','socks://127.0.0.1:9051','>>vnc\\log.txt'], shell=True)
+        subprocess.Popen(['vnc\\VNC-Viewer.exe',id_host+':15902','-ProxyServer','socks://127.0.0.1:9051','>>vnc\\log.txt','2>Nul'], shell=True)
         #os.system("vnc\\VNC-Viewer.exe 2aggmsges4zf456axt4osofoa54ukdwamavheqe7afdrmvom2ut5mmqd.onion:15902 -ProxyServer socks://127.0.0.1:9050")
     else:
         pass
