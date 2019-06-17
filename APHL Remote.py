@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import subprocess
 import random
 import socket
@@ -9,7 +10,7 @@ pwd=''
 
 for i in output:
     pwd+=str(i)
-print pwd,r_pwd
+print 'Password '+str(r_pwd)
 
 
 vncini = '[80000001\\Software\\ORL\\WinVNC3]\nSocketConnect=D1\nAutoPortSelect=D0\nPortNumber=D5902\nHTTPPortNumber=D5802\nInputsEnabled=D1\nLocalInputsDisabled=D0\nIdleTimeout=D0\n\
@@ -18,7 +19,8 @@ PollUnderCursor=D0\nPollForeground=D1\nPollFullScreen=D0\nOnlyPollConsole=D1\nOn
 LocalInputsPriority=D0\nPassword=B'+pwd+'\nPasswordViewOnly=B'+pwd+'\n[80000002\Software\ORL\WinVNC3]\nConnectPriority=D2\nLoopbackOnly=D0\nEnableHTTPDaemon=D0\nEnableURLParams=D0\n\
 AllowLoopback=D1\nAuthRequired=D1\nDebugMode=D0\nDebugLevel=D2\n'
 
-torrc = 'HiddenServiceDir "./hidden_service/"\nHiddenServicePort 15902 '+socket.gethostname()+':5902'
+#torrc = 'HiddenServiceDir "./hidden_service/"\nHiddenServicePort 15902 2mliuxkv76rwpbs4g2oabstyj6nl2phwjwxvudabdb7p3wtr5qsjsmqd.onion:5902'
+torrc = 'HiddenServiceDir "./Tor/hidden_service/"\nHiddenServicePort 15902 '+socket.gethostname()+':5902\nSocksPort 127.0.0.1:9050 PreferSOCKSNoAuth'
 
 vnc_file = open("vnc\\winvnc.ini", "w")
 vnc_file.write(vncini)
@@ -28,13 +30,17 @@ tor_file = open("Tor\\torrc", "w")
 tor_file.write(torrc)
 tor_file.close()
 
-os.system("taskkill /im tor.exe /f")
-os.system("taskkill /im winvnc.exe /f")
+os.system("echo off;taskkill /im tor.exe /f >NUL")
+os.system("echo off;taskkill /im winvnc.exe /f >NUL")
 
 vncstart = subprocess.Popen(['vnc\\winvnc.exe'], shell=True)
-torstart = subprocess.Popen(['Tor\\tor.exe','-f','torrc'], shell=True)
+torstart = subprocess.Popen(['Tor\\tor.exe','-f','Tor\\torrc','>>Tor\\log.txt'], shell=True)
 
 tor_host = open("Tor\\hidden_service\\hostname", "r")
-print tor_host.read()
+print 'HstName '+tor_host.read()
 tor_host.close()
+while True:
+    ID= str(input('Id:'))
+    if ID !='':
+        print 'Правельно'
 vncstart.wait()
