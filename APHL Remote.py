@@ -15,7 +15,7 @@ pwd=''
 
 for i in output:
     pwd+=str(i)
-print('Ваш пароль: '.encode().decode('cp866')+r_pwd)
+print('Ваш пароль: '.encode().decode()+r_pwd)
 
 
 vncini = '[80000001\\Software\\ORL\\WinVNC3]\nSocketConnect=D1\nAutoPortSelect=D0\nPortNumber=D5902\nHTTPPortNumber=D5802\nInputsEnabled=D1\nLocalInputsDisabled=D0\nIdleTimeout=D0\n\
@@ -24,7 +24,6 @@ PollUnderCursor=D0\nPollForeground=D1\nPollFullScreen=D0\nOnlyPollConsole=D1\nOn
 LocalInputsPriority=D0\nPassword=B'+pwd+'\nPasswordViewOnly=B'+pwd+'\n[80000002\Software\ORL\WinVNC3]\nConnectPriority=D2\nLoopbackOnly=D0\nEnableHTTPDaemon=D0\nEnableURLParams=D0\n\
 AllowLoopback=D1\nAuthRequired=D1\nDebugMode=D0\nDebugLevel=D2\n'
 
-#torrc = 'HiddenServiceDir "./hidden_service/"\nHiddenServicePort 15902 2mliuxkv76rwpbs4g2oabstyj6nl2phwjwxvudabdb7p3wtr5qsjsmqd.onion:5902'
 torrc = 'HiddenServiceDir "./Tor/hidden_service/"\nHiddenServicePort 15902 '+socket.gethostname()+':5902\nSocksPort 127.0.0.1:9051 PreferSOCKSNoAuth'
 
 vnc_file = open("vnc\\winvnc.ini", "w")
@@ -43,13 +42,19 @@ torstart = subprocess.Popen(['Tor\\tor.exe','-f','Tor\\torrc','>>Tor\\log.txt'],
 sleep(3)
 tor_host = open("Tor\\hidden_service\\hostname", "r+")
 th = tor_host.readlines()[0]
-print('Доменное имя: '.encode().decode('cp866')+th)
-print('Введите Ваше имя: '.encode().decode('cp866'))
+tor_host.close()
+print('Введите Ваше имя или нажмите Enter: '.encode().decode())
 user_name = str(input())
 while True:
     id_host = requests.get('http://aphl.ru:19191/host='+th[:-1]+'&user='+user_name)
     tor_host.close()
     id_host=id_host.text
-    print('Ваш ID: '.encode().decode('cp866') +id_host)
-    sleep(300)
-    print('Ваш пароль: '.encode().decode('cp866') + r_pwd)
+    print('\nВаш ID: '.encode().decode() +id_host)
+    print('\nНажмите "q" для выхода!')
+    if str(input()) == 'q':
+        os.system("taskkill /im tor.exe /f >NUL 2>Nul")
+        os.system("taskkill /im winvnc.exe /f >NUL 2>Nul")
+        os.system("start https://hostlip.ru/stati/")
+        break
+    print('Ваш пароль: '.encode().decode() + r_pwd)
+exit(0)
