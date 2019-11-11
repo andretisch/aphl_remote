@@ -47,7 +47,7 @@ tor_host.close()
 while True:
     id_host=Set_tor_url(th[:-1])
     print('\nВаш ID: '.encode().decode() +id_host)
-    print('\nНажмите "q" для выхода!')
+    print('\nВведите "q" для выхода!')
     if str(input()) == 'q':
         os.system("taskkill /im tor.exe /f >NUL 2>Nul")
         os.system("taskkill /im winvnc.exe /f >NUL 2>Nul")
