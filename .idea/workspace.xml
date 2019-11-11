@@ -2,35 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caac1690-711d-40cf-b2fd-6d10bfbcbf77" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/RemoteGUI.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tor/PluggableTransports/Crypto.Cipher._AES.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tor/PluggableTransports/Crypto.Hash._SHA256.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tor/PluggableTransports/Crypto.Hash._SHA512.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tor/PluggableTransports/Crypto.Random.OSRNG.winrandom.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tor/PluggableTransports/Crypto.Util._counter.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tor/PluggableTransports/Crypto.Util.strxor.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tor/PluggableTransports/_ctypes.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tor/PluggableTransports/_hashlib.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tor/PluggableTransports/_socket.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tor/PluggableTransports/_ssl.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tor/PluggableTransports/bz2.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tor/PluggableTransports/fte.cDFA.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tor/PluggableTransports/fteproxy.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tor/PluggableTransports/fteproxy.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tor/PluggableTransports/fteproxy/VERSION" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tor/PluggableTransports/fteproxy/defs/20131224.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tor/PluggableTransports/meek-client-torbrowser.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tor/PluggableTransports/meek-client.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tor/PluggableTransports/obfs4proxy.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tor/PluggableTransports/obfsproxy.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tor/PluggableTransports/obfsproxy.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tor/PluggableTransports/pyexpat.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tor/PluggableTransports/python27.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tor/PluggableTransports/select.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tor/PluggableTransports/terminateprocess-buffer.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tor/PluggableTransports/unicodedata.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tor/PluggableTransports/w9xpopen.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tor/PluggableTransports/zope.interface._zope_interface_coptimizations.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/APHL Remote.py" beforeDir="false" afterPath="$PROJECT_DIR$/APHL Remote.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APHL viewer.py" beforeDir="false" afterPath="$PROJECT_DIR$/APHL viewer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/start.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vnc/winvnc.ini" beforeDir="false" afterPath="$PROJECT_DIR$/vnc/winvnc.ini" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/APHL Remote.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="40" column="42" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="42" />
+            <state relative-caret-position="368">
+              <caret line="47" column="32" lean-forward="true" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
               <folding>
                 <element signature="e#24#41#0" expanded="true" />
               </folding>
@@ -53,22 +30,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/APHL viewer.py">
+        <entry file="file://$PROJECT_DIR$/Test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#17#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="64">
+              <caret line="4" selection-start-line="4" selection-end-line="6" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Test.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/APHL viewer.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
-              <caret line="9" selection-start-line="9" selection-end-line="11" selection-end-column="20" />
+              <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#17#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -89,23 +66,29 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/start.bat" />
+        <option value="$PROJECT_DIR$/RemoteGUI.py" />
         <option value="$PROJECT_DIR$/server.py" />
-        <option value="$PROJECT_DIR$/Test.py" />
         <option value="$PROJECT_DIR$/APHL viewer.py" />
+        <option value="$PROJECT_DIR$/Test.py" />
         <option value="$PROJECT_DIR$/APHL Remote.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-4" />
+    <option name="x" value="-1284" />
     <option name="y" value="-4" />
-    <option name="width" value="1928" />
-    <option name="height" value="1044" />
+    <option name="width" value="1288" />
+    <option name="height" value="1032" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -113,7 +96,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -121,16 +103,23 @@
               <item name="APHL Remote" type="b2602c69:ProjectViewProjectNode" />
               <item name="APHL Remote" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="APHL Remote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="APHL Remote" type="462c0819:PsiDirectoryNode" />
+              <item name="vnc" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/vnc/VNC-Viewer.exe" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/vnc/VNC-Viewer.exe" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -192,6 +181,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="RemoteGUI" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="APHL Remote" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RemoteGUI.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="APHL Remote" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -236,9 +246,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.APHL Remote" />
         <item itemvalue="Python.APHL viewer" />
+        <item itemvalue="Python.APHL Remote" />
         <item itemvalue="Python.Test" />
+        <item itemvalue="Python.RemoteGUI" />
         <item itemvalue="Python.server" />
       </list>
     </recent_temporary>
@@ -303,7 +314,21 @@
       <option name="project" value="LOCAL" />
       <updated>1564726407722</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Beta Release 0.2.2">
+      <created>1564727887550</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1564727887550</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Beta Release 0.2.2 + add vnc viewer">
+      <created>1564728334445</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1564728334445</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -316,21 +341,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1928" height="1044" extended-state="6" />
+    <frame x="-1284" y="-4" width="1288" height="1032" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.117430225" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11596505" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32937366" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32937366" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4997367" visible="true" weight="0.32932165" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32937366" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32937366" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32937366" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32937366" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5002633" side_tool="true" weight="0.32937366" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32937366" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -345,51 +371,60 @@
     <MESSAGE value="Delite hide" />
     <MESSAGE value="Test Viewer and add server" />
     <MESSAGE value="Beta Release 0.2.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Beta Release 0.2.1" />
+    <MESSAGE value="Beta Release 0.2.2" />
+    <MESSAGE value="Beta Release 0.2.2 + add vnc viewer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Beta Release 0.2.2 + add vnc viewer" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ini.ini" />
     <entry file="file://$PROJECT_DIR$/winvnc.ini" />
-    <entry file="file://$PROJECT_DIR$/start.bat">
+    <entry file="file://$PROJECT_DIR$/RemoteGUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+        <state relative-caret-position="288">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+          <folding>
+            <element signature="e#24#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/start.bat" />
     <entry file="file://$PROJECT_DIR$/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="30" column="43" lean-forward="true" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+        <state relative-caret-position="80">
+          <caret line="7" column="107" selection-start-line="7" selection-start-column="99" selection-end-line="7" selection-end-column="107" />
           <folding>
             <element signature="e#24#81#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vnc/winvnc.ini">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" selection-start-line="9" selection-end-line="11" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/APHL viewer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="64">
+          <caret line="4" selection-start-line="4" selection-end-line="6" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/APHL Remote.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="40" column="42" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="42" />
+        <state relative-caret-position="368">
+          <caret line="47" column="32" lean-forward="true" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
           <folding>
             <element signature="e#24#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/APHL viewer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
           </folding>
         </state>
       </provider>

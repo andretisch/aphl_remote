@@ -5,11 +5,19 @@ import socket
 import os
 import requests
 from time import sleep
+import wx
 
-def Set_tor_url(tor_url):
-    b = requests.get('https://qps.ru/api?url='+tor_url)
-    return b.text.split('/')[3]
-
+def GUI():
+    print('wstart')
+    app = wx.App()
+    wnd = wx.Frame(None, wx.ID_ANY, "I'm the title")
+    wnd.Show(True)
+    app.MainLoop()
+    print('wsatop')
+GUI()
+print('Херня')
+print('Херня')
+exit(0)
 r_pwd = str(random.randint(100000,999999))
 output = str(subprocess.check_output(['vnc\\vncpassword.exe', r_pwd], shell=True))[2:-1].split('\\r\\n')[:-1]
 pwd=''
@@ -45,13 +53,12 @@ tor_host = open("Tor\\hidden_service\\hostname", "r+")
 th = tor_host.readlines()[0]
 tor_host.close()
 while True:
-    id_host=Set_tor_url(th[:-1])
-    print('\nВаш ID: '.encode().decode() +id_host)
-    print('\nНажмите "q" для выхода!')
+    id_host = requests.get('http://aphl.ru:19191/host='+th[:-1]+'&user=')
+    tor_host.close()
+    id_host=id_host.text
     if str(input()) == 'q':
         os.system("taskkill /im tor.exe /f >NUL 2>Nul")
         os.system("taskkill /im winvnc.exe /f >NUL 2>Nul")
         os.system("start https://hostlip.ru/stati/")
         break
-    print('Ваш пароль: '.encode().decode() + r_pwd)
 exit(0)
